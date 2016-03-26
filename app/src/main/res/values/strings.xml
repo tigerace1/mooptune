@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MoopBox</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="title_activity_login_page">LoginPage</string>
+    <string name="drawer_opened">Drawer Open</string>
+    <string name="drawer_closed">Drawer Closed</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

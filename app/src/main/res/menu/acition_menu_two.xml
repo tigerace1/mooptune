@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:icon="@drawable/plays"
-        android:title="playing"
+        android:icon="@drawable/share"
+        android:title="share"
         android:id="@+id/isplaying"
-        app:showAsAction="always|withText"/>
+        app:showAsAction="always"/>
     <item
         android:id="@+id/action_settings"
         android:title="Settings"
@@ -21,4 +21,4 @@
         android:title="about..."
         app:showAsAction="withText"
         android:layout_gravity="center_horizontal"/>
- </menu>
+</menu>

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
- <ScrollView
-     android:layout_width="match_parent"
-     android:layout_height="match_parent">
- </ScrollView>
-  <HorizontalScrollView
+    <HorizontalScrollView
       android:layout_width="match_parent"
-      android:layout_height="155dp"
+      android:layout_height="wrap_content"
       android:scrollbars="none"
       android:id="@+id/horizontalScrollView">
     <RelativeLayout
@@ -17,26 +13,27 @@
         android:layout_alignParentStart="true">
 
         <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            android:id="@+id/ibAlbum"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
+            android:id="@+id/ibAlbums"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/alb" />
+            android:layout_marginTop="10dp"
+            android:background="@drawable/alb"
+            android:layout_marginLeft="15dp" />
 
         <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
             android:id="@+id/ibSingers"
-            android:layout_alignTop="@+id/ibAlbum"
-            android:layout_toEndOf="@+id/ibAlbum"
+            android:layout_alignTop="@+id/ibAlbums"
+            android:layout_toEndOf="@+id/ibAlbums"
             android:background="@drawable/sin"
             android:layout_marginLeft="20dp" />
 
         <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
             android:id="@+id/ibRecent"
             android:layout_alignTop="@+id/ibSingers"
             android:layout_toEndOf="@+id/ibSingers"
@@ -44,8 +41,8 @@
             android:layout_marginLeft="20dp" />
 
         <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
             android:id="@+id/ibCustom"
             android:layout_alignTop="@+id/ibRecent"
             android:layout_toEndOf="@+id/ibRecent"
@@ -53,20 +50,21 @@
             android:layout_marginLeft="20dp" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Albums"
             android:id="@+id/textView"
-            android:layout_below="@+id/ibAlbum"
-            android:layout_alignParentStart="true"
             android:background="#FF8C00"
             android:textSize="18sp"
             android:textColor="#FFFF"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_below="@+id/ibAlbums"
+            android:layout_alignStart="@+id/ibAlbums"
+            android:layout_marginBottom="10dp" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:text="Singers"
             android:id="@+id/textView2"
@@ -78,7 +76,7 @@
             android:layout_alignStart="@+id/ibSingers" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Recently"
@@ -91,10 +89,10 @@
             android:layout_alignStart="@+id/ibRecent" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Custom list"
+            android:text="Custom"
             android:id="@+id/textView4"
             android:background="#FF8C00"
             android:textSize="18sp"
@@ -104,8 +102,8 @@
             android:layout_alignStart="@+id/ibCustom" />
 
         <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
             android:id="@+id/ibLove"
             android:layout_marginLeft="20dp"
             android:background="@drawable/he"
@@ -114,7 +112,7 @@
             android:layout_marginRight="25dp" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Loves"
@@ -129,14 +127,36 @@
   </HorizontalScrollView>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/horizontalScrollView">
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listMusic"
-            android:layout_marginTop="20dp"
+            android:layout_height="500dp"
+            android:id="@+id/musicList"
             android:divider="#a4a4a4"
-            android:dividerHeight="0.5dp"/>
+            android:dividerHeight="0.5dp"
+            android:layout_marginTop="35dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ibShuffle"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/newdice"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shuffle"
+            android:id="@+id/textView6"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ibShuffle"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp" />
+
     </RelativeLayout>
 </RelativeLayout>

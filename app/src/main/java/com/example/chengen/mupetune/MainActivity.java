@@ -21,11 +21,10 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {
 
             }
-
             @Override
             public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, Tabs.class);
                 iv.startAnimation(an2);
-                Intent intent = new Intent(MainActivity.this, NavigationLayout.class);
                 startActivity(intent);
                 finish();
             }

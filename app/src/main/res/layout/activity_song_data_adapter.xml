@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="65dp"
     tools:context="com.example.chengen.mupetune.SongDataAdapter">
 
     <ImageView
@@ -11,11 +11,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="8dp" />
 
     <TextView
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:id="@+id/tvSongName"
         android:layout_marginLeft="10dp"
         android:layout_alignTop="@+id/ivSongImage"
@@ -23,24 +23,24 @@
         android:textColor="#000"
         android:textSize="18sp"
         android:singleLine="true"
-        android:layout_alignBottom="@+id/ivIsPlaying" />
+        android:layout_above="@+id/tvartist" />
 
     <ImageView
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:id="@+id/ivIsPlaying"
         android:layout_marginLeft="35dp"
-        android:layout_toEndOf="@+id/tvSongName"
         android:visibility="invisible"
-        android:layout_marginTop="25dp" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="49dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:id="@+id/tvartist"
-        android:layout_alignEnd="@+id/tvSongName"
-        android:layout_below="@+id/tvSongName"
-        android:layout_alignStart="@+id/tvSongName"
-        android:textSize="16sp"
-        android:textColor="#8c8c8c" />
+        android:textSize="14sp"
+        android:textColor="#8c8c8c"
+        android:layout_alignBottom="@+id/ivSongImage"
+        android:layout_alignStart="@+id/tvSongName" />
 </RelativeLayout>

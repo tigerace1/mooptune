@@ -37,9 +37,9 @@
         </activity>
         <activity android:name=".SongDataAdapter" >
         </activity>
-        <activity android:name=".NavigationLayout" >
+        <activity android:name=".LocalMusics">
         </activity>
-        <activity android:name=".NavItem" >
+        <activity android:name=".Tabs">
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

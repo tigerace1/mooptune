@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@drawable/cube">
+    android:background="#FFFF">
  <ScrollView
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
              android:layout_height="65dp"
              android:text="Log in"
              android:id="@+id/btnlogin"
-             android:background="@drawable/button"
+             android:background="#000000"
              android:layout_marginRight="45dp"
              android:layout_marginLeft="45dp"
              android:textSize="35sp"

@@ -1,7 +1,10 @@
 package com.example.chengen.mupetune;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -23,10 +26,20 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onAnimationEnd(Animation animation) {
-                Intent intent = new Intent(MainActivity.this, Tabs.class);
+                Intent isLoggedIn = new Intent(MainActivity.this, Tabs.class);
+                Intent isNotLoggedIn = new Intent(MainActivity.this, LoginPage.class);
                 iv.startAnimation(an2);
-                startActivity(intent);
-                finish();
+
+                //LOOK HERE CHENGEN -----------------------------------------------
+                SharedPreferences sharedPref = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+                if(sharedPref.contains("username")) {
+                    startActivity(isLoggedIn);
+                    finish();
+                }else{
+                    startActivity(isNotLoggedIn);
+                    finish();
+                }
+                //-----------------------------------------------------------------
             }
             @Override
             public void onAnimationRepeat(Animation animation) {

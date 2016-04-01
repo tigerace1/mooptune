@@ -53,7 +53,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             case R.id.btnlogin:
                 String username = user.getText().toString();
                 String password = user.getText().toString();
-                upLoadToDB(username, password); //WHY IS THERE AN ERROR HERE? I COULDNT FIND CODE FOR REGULAR HTTP LOGIN
+                //upLoadToDB(username, password); //WHY IS THERE AN ERROR HERE? I COULDNT FIND CODE FOR REGULAR HTTP LOGIN
                 break;
             case R.id.tvforget:
                 break;
